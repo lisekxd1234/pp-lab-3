@@ -1,28 +1,19 @@
-// Import klasy Scanner, aby wczytywać dane z konsoli
-import java.util.Scanner;
+import geometry.Circle;
+import geometry.Point;
 
-// Definicja klasy Main
 public class Main {
-    // Metoda główna programu
     public static void main(String[] args) {
-        // Tworzenie obiektu klasy Scanner do wczytywania danych z konsoli
-        Scanner scanner = new Scanner(System.in);
+        // Tworzenie obiektu klasy Point reprezentującego środek koła
+        Point center = new Point(0, 0);
         
-        // Prośba o wprowadzenie współrzędnych punktu
-        System.out.println("Podaj współrzędną x:");
-        double x = scanner.nextDouble(); // Wczytanie współrzędnej x
-        System.out.println("Podaj współrzędną y:");
-        double y = scanner.nextDouble(); // Wczytanie współrzędnej y
+        // Tworzenie obiektu klasy Circle z podanym środkiem i promieniem
+        Circle circle = new Circle(center, 5);
         
-        // Tworzenie obiektu klasy Point z wczytanymi współrzędnymi
-        Point point = new Point(x, y);
-        
-        // Wyświetlenie współrzędnych punktu
-        System.out.println("Współrzędne punktu:");
-        System.out.println("x = " + point.getX());
-        System.out.println("y = " + point.getY());
-        
-        // Zamknięcie obiektu Scanner
-        scanner.close();
+        // Wyświetlenie właściwości koła
+        System.out.println("Właściwości koła:");
+        System.out.println("Środek koła: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("Promień koła: " + circle.getRadius());
+        System.out.println("Obwód koła: " + circle.calculatePerimeter());
+        System.out.println("Pole powierzchni koła: " + circle.getArea());
     }
 }

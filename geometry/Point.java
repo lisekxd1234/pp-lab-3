@@ -1,3 +1,5 @@
+package geometry;
+
 // Definicja klasy Point
 public class Point {
     // Prywatne pola x i y
