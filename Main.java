@@ -1,15 +1,14 @@
-import geometry.Rectangle;
+import geometry.Square;
 
 public class Main {
     public static void main(String[] args) {
-        // Tworzenie obiektu klasy Rectangle z podanymi wymiarami
-        Rectangle rectangle = new Rectangle(4, 6);
+        // Tworzenie obiektu klasy Square z podanym bokiem
+        Square square = new Square(5);
         
-        // Wyświetlenie właściwości prostokąta
-        System.out.println("Właściwości prostokąta:");
-        System.out.println("Długość: " + rectangle.getLength());
-        System.out.println("Szerokość: " + rectangle.getWidth());
-        System.out.println("Pole prostokąta: " + rectangle.calculateArea());
-        System.out.println("Obwód prostokąta: " + rectangle.calculatePerimeter());
+        // Wyświetlenie właściwości kwadratu
+        System.out.println("Właściwości kwadratu:");
+        System.out.println("Bok: " + square.getLength());
+        System.out.println("Pole kwadratu: " + square.calculateArea());
+        System.out.println("Obwód kwadratu: " + square.calculatePerimeter());
     }
 }
